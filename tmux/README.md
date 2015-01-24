@@ -6,9 +6,9 @@ Base boxes with tmux
 Usage
 -----
 
-   docker build -t alpinelinux:tmux .
-   docker run -td alpinelinux:tmux
-   docker exec -ti <container-id> tmux
+    docker build -t alpinelinux:tmux .
+    docker run -td alpinelinux:tmux
+    docker exec -ti <container-id> tmux
 
 Notes
 -----
