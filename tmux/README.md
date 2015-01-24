@@ -13,4 +13,6 @@ Usage
 Notes
 -----
 
+Default user is __user__ with __default__ as password and it's a sudoer
+
 Check [this](https://github.com/docker/docker/issues/8755)
