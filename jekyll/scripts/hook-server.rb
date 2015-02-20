@@ -4,6 +4,7 @@ require 'json'
 require 'git'
 require 'jekyll'
 
+set :bind, '0.0.0.0'
 set :source, '/root/clones'
 set :destination, '/srv/hosts'
 
@@ -13,11 +14,11 @@ def build_site(name, url)
     server: false,
     auto: false,
     source: File.join(settings.source, name),
-    destination: File.join(settings.destination, name),
+    destination: File.join(settings.destination, name, 'www'),
     plugins: File.join(settings.source, name, '_plugins')
   }
   unless Dir.exists?(options[:source])
-    Git.clone(url, 'test', path: settings.source)
+    Git.clone(url, name, path: settings.source)
   else
     g = Git.init(options[:source])
     g.pull
