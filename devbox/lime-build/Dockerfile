@@ -8,5 +8,7 @@ RUN apt-get update  && \
 
 RUN ln /usr/bin/find /usr/sbin/find && \ 
     useradd user -m
-
+    
 USER user
+
+VOLUME /build
