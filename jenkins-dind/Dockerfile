@@ -1,4 +1,5 @@
 FROM jenkins:latest
+MAINTAINER encrypt <encrypt@labr.xyz>
 
 USER root
 
